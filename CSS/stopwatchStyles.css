@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+#heading{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#heading h1{
+    color: rgb(1, 1, 117);
+    text-align: center;
+}
+
+#heading h1 i{
+    margin-right: 10px;
+}
+
+#app-body{
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    box-sizing: border-box;
+}
