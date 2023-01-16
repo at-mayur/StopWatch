@@ -1,3 +1,4 @@
+/* Some basic style for body and adjusting container location */
 body{
     margin: 0;
     background-color: lightgrey;
@@ -6,7 +7,7 @@ body{
     align-items: center;
 }
 
-/* main container for stopwatch.. */
+/* Styling main container for stopwatch App.. */
 #container{
     width: 60%;
     height: 80%;
@@ -16,11 +17,13 @@ body{
     box-sizing: border-box;
 }
 
+/* Class style which displays blinking shadow when clock is ticking on Start */
+/* We are toggling this class on button click using JS */
 .watch-start-shadow{
     animation: blinkShadow 2s ease-in-out infinite;
-    
 }
 
+/* keyframes for above animation */
 @keyframes blinkShadow {
     from{
         box-shadow: 0 0 10px 2px rgba(229, 1, 1, 1) inset;
@@ -33,13 +36,15 @@ body{
     }
 }
 
-/* Styling head of app... */
+/* Styling heading of app... */
+/* Using flex to align items to center */
 #heading{
     height: 18%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #heading h1{
     color: rgb(1, 1, 117);
     text-align: center;
@@ -47,21 +52,22 @@ body{
     margin: 2%;
 }
 
-#heading h1 i{
-    margin-right: 10px;
-}
-
+/* Styling stpwatch icon from heading */
 .watch-icon{
     font-size: xx-large;
     color: rgb(1, 1, 117);
     margin-right: 1rem;
 }
 
+
+/* Class styles for Stopwatch icon animation on stopwatch start
+Toggling this class using JS */
 .watch-start-movingWatch{
     transition: all 0.5s;
     animation: alert 1s ease-in-out infinite;
 }
 
+/* Keyframes for above animation */
 @keyframes alert {
     from{
         transform: rotate(0deg) scale(1.5);
@@ -84,7 +90,7 @@ body{
     }
 
     50%{
-        transform: rotate(-5deg) scale(1.5);
+        transform: rotate(-8deg) scale(1.5);
     }
 
     60%{
@@ -92,7 +98,7 @@ body{
     }
 
     70%{
-        transform: rotate(5deg) scale(1.5);
+        transform: rotate(8deg) scale(1.5);
     }
 
     80%{
@@ -110,7 +116,7 @@ body{
 
 
 /* Styling display and buttons for stopwatch */
-
+/* Setting width height for div */
 #app-body{
     width: 100%;
     height: 85%;
@@ -118,10 +124,13 @@ body{
     box-sizing: border-box;
 }
 
+/* Styling display element  */
+/* kept margin auto to align element to center horizontally
+Used display flex and Justify content center to place inner elements to center vertically */
 #display{
     height: 35%;
     width: 50%;
-    margin: 2% auto 3%;
+    margin: 2% auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -130,13 +139,8 @@ body{
     background-color: rgb(253, 127, 2);
 }
 
-#btn-holder{
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Styling div element within display element */
+/* used text align center to align span elements to center */
 #display div{
     text-align: center;
     font-size: 60px;
@@ -145,17 +149,29 @@ body{
     color: white;
 }
 
+/* Overriding styles applied from above rules
+like fontsize for displaying miliSconds below with smaller font size */
 #mili-container{
     font-size: 20px;
     margin-top: 2%;
     text-align: right;
-    padding-right: 2.5rem;
+    padding-right: 3rem;
 }
 
 .watch-digit{
     transition: all 0.5s;
 }
 
+/* Buttons styling starts here */
+/* Using flex to align buttons to center */
+#btn-holder{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Few common styles for all buttons */
 #btn-holder button{
     font-size: 2rem;
     padding: 1rem;
@@ -165,6 +181,7 @@ body{
     color: white;
 }
 
+/* Red background for start button */
 .red-bg{
     background-color: red;
 }
@@ -173,6 +190,7 @@ body{
     background-color: rgb(180, 1, 1);
 }
 
+/* Green background for Stop button */
 .green-bg{
     background-color: green;
 }
@@ -181,6 +199,7 @@ body{
     background-color: rgb(2, 104, 2);
 }
 
+/* Yellow background for Reset button */
 .yellow-bg{
     background-color: rgb(237, 194, 2);
 }
@@ -189,6 +208,8 @@ body{
     background-color: rgb(176, 144, 1);
 }
 
+/* Grey background for start button after clicked until stop resets or stops
+Toggling this class using JS */
 .grey-bg{
     background-color: lightgrey;
 }
@@ -197,6 +218,8 @@ body{
     background-color: grey;
 }
 
+
+/* Last section styling which contains list of laps */
 #laps{
     width: 100%;
     height: 30%;
@@ -204,11 +227,14 @@ body{
     overflow: scroll;
 }
 
+/* Hiding Scrollbar */
 #laps::-webkit-scrollbar{
     display: none;
     
 }
 
+/* Preventing default appearance of Oredred List
+Using customised one by setting counter-reset: item */
 #laps ol{
     height: 100%;
     counter-reset: item;
@@ -217,6 +243,7 @@ body{
     box-sizing: border-box;
 }
 
+/* Styling individual li element */
 #laps ol li{
     display: block;
     font-size: 1.2rem;
@@ -228,6 +255,7 @@ body{
     box-sizing: border-box;
 }
 
+/* Styling before for customised bullets for Ordered list */
 #laps ol li::before{
     content: "Lap "counter(item) ":";
     counter-increment: item;
@@ -235,6 +263,8 @@ body{
     margin: 0 1.5rem;
 }
 
+
+/* Media Queries for managing overflow on smaller screen sizes */
 @media screen and (max-width: 1100px) {
 
     #display{

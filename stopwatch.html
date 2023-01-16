@@ -8,16 +8,20 @@
     </head>
     <body>
         
-        
+        <!-- main container for Stop Watch App -->
         <div id="container">
-
+            <!-- Heading section for the App -->
             <div id="heading">
                 <div class="watch-icon" id="watch-icon"><i class="fa-solid fa-stopwatch"></i></div>
                 <h1>  
                     Stopwatch
                 </h1>
             </div>
+
+            <!-- Main App Content starts here containing display element, buttons and List of Laps -->
             <div id="app-body">
+
+                <!-- Display Element -->
                 <div id="display">
                     <div>
                         <span class="watch-digit" id="hours">00</span>
@@ -29,12 +33,15 @@
                     </div>
                     
                 </div>
+
+                <!-- Start, Stop and Reset buttons -->
                 <div id="btn-holder">
                     <button type="button" class="start-btn red-bg" id="start-btn">Start</button>
                     <button type="button" class="stop-btn green-bg" id="stop-btn">Stop</button>
                     <button type="button" class="reset-btn yellow-bg" id="reset-btn">Reset</button>
                 </div>
 
+                <!-- List for listing Laps -->
                 <div id="laps">
                     <ol id="laps-list">
                         
