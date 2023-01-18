@@ -7,6 +7,11 @@ This is my Stop Watch App project. It has three **Buttons** namely **Start**, **
 It **starts watch on Clicking Start** Button &amp; **Stops watch on Clicking Stop** Button. Also it adds Laps below on stopping the watch.
 On pressing **Reset it resets the watch to zero** and Clears laps list.
 
+> It also has some visual animations on starting Watch.
+
+![Snap of Stop Watch App Screen](./Images/StopWatchss.jpg)
+
+
 
 ## Tools &amp; Languages Used
 1. Tools Used
